@@ -1,4 +1,4 @@
-class CreateSystangoHrmHolidays < ActiveRecord::Migration
+class CreateSystangoHrmHolidays < ActiveRecord::Migration[4.2]
   def change
     create_table :systango_hrm_holidays do |t|
       t.date :holiday_date
