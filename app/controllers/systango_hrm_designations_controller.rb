@@ -6,7 +6,7 @@ class SystangoHrmDesignationsController < SystangoHrmController
   include SystangoHrm::ContextMenu
   generate_context_menu("designation")
   
-  before_filter :intialize_and_fetch_designations, only:[:index, :create]
+  before_action :intialize_and_fetch_designations, only:[:index, :create]
 
   helper :custom_fields
   
