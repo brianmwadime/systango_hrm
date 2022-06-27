@@ -1,5 +1,5 @@
 # English strings go here for Rails i18n
-"en":
+en:
   permission_add_designation_wise_entitled_leaves: Manage designations and leaves entitlements
   permission_add_employee_leave_details: Manage leave accounts
   permission_add_compoff_details: Manage day in lieu/comp-offs
