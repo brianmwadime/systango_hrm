@@ -1,13 +1,13 @@
 class SystangoHrmEmployeeLeavesController < SystangoHrmController
   unloadable
-  before_filter :find_or_initialize_employee_leave
+  before_action :find_or_initialize_employee_leave
   # Don't change order of filters. it is chained.
-  before_filter :check_leave_account_is_created, :fetch_teamleads_subordinates, only: [:new, :create, :edit, :update]
-  before_filter :leave_application_details, only: [:new, :create, :edit, :update, :application, :accepted, :unapproved, :pending, :manage_request, :update_leave_status]
-  before_filter :leave_application_instance, only: [:new, :create, :manage_request, :edit, :update]
-  before_filter :authorize_to_view_application, only: [:application,:update_leave_status]
-  before_filter :initialize_employee_leave, only: :update
-  before_filter :validate_leave_type, only: [:create, :update]
+  before_action :check_leave_account_is_created, :fetch_teamleads_subordinates, only: [:new, :create, :edit, :update]
+  before_action :leave_application_details, only: [:new, :create, :edit, :update, :application, :accepted, :unapproved, :pending, :manage_request, :update_leave_status]
+  before_action :leave_application_instance, only: [:new, :create, :manage_request, :edit, :update]
+  before_action :authorize_to_view_application, only: [:application,:update_leave_status]
+  before_action :initialize_employee_leave, only: :update
+  before_action :validate_leave_type, only: [:create, :update]
   
   def new
 	  @employee_leave = SystangoHrmEmployeeLeave.new
