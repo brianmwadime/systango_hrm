@@ -1,4 +1,4 @@
-class CreateSystangoHrmLeaveSummaryCurrentYears < ActiveRecord::Migration
+class CreateSystangoHrmLeaveSummaryCurrentYears < ActiveRecord::Migration[5.2]
   def change
     create_table :systango_hrm_leave_summary_current_years do |t|
       t.integer :user_id
