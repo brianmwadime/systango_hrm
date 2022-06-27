@@ -12,28 +12,21 @@ en:
   permission_view_leave_report_self: View leaves report only me
   permission_show_subordinate_and_its_teamlead: View leaves approval hierarchy
   permission_hr_permissions: Final leave approval
-  
   label_link_apply_leave: Apply leaves here
   label_link_view_holday_calendar: View holiday calendar
-
   label_designation: Designation
   label_leave_balance: Leave balance
-  
   label_promotion_for: Update designation/leave account for
   label_previous_designation: Previous designation
   label_new_designation: New designation
-  
   label_no_employee_have_leave_account: No user has leave account
   label_comp_off_submitted_on: Submitted on
-  
   heading_list_of_user_not_having_leave_account: List of users having account with their details
   heading_designation_details_for: Designation details for
-  
   label_users_have_leave_account: Users have leave account
   label_users_have_no_leave_account: Users not have leave account
   label_update_leave_account_for: Current designation/leave account for
   label_maternity_option_value: Maternity option value
-
   label_add_approvres_of_leave: Add approvers and corresponding users
   label_approver_user: Approver
   button_remove_subordinate: Remove
@@ -43,13 +36,11 @@ en:
   no_teamlead_added_message: There is no approver added.
   label_aprrover_for: Approver for
   label_leave_approver_of: can approve leaves of -
-  
   label_show_approvers_of_leave: Show approvers and corresponding users
   label_message_no_user_added: No user added.
   label_leaves_approved_by: leaves are approved by
   label_approve_leave_of: approves leaves of
   label_no_record: None
-  
   submit_form: Submit
   label_entitled_leaves: Leaves entitlement
   label_holiday: Holiday for
@@ -69,9 +60,7 @@ en:
   label_maternity_leave: Maternity leave
   label_comp_offs: Total comp-offs
   label_for_maternity_leaves: Eligible for maternity leaves
-
   confirm_delete: Are you sure?
-  
   button_reset_all: Reset all
   button_update: Update
   button_approve: Approve
@@ -135,11 +124,9 @@ en:
   label_referral: Referral
   prompt_to_select: Please select
   link_view_more: View more...
-  
   error_user_not_have_manage_leaves_permissoin: "does not have 'Manage leaves' permission. Please add permission and then proceed."
   label_if_you_are_admin: If you are Admin you can add it from
   label_please_ask_admin_to_add_permission: Please ask admin to add permission for it.
-  
   heading_leave_report: View leaves report
   heading_holiday_update: Update existing holiday
   heading_for_manage_requests: Manage leave requests
@@ -156,7 +143,6 @@ en:
   heading_category: Manage leave category
   message_no_employee_select: No employee to select
   message_no_desgination: No designation added
-
   table_heading_annual_entitled_leaves: Designation and annual leaves entitlements
   heading_add_entitled_leaves: Add designation and leaves entitlement
   heading_update_entitled_leaves: Update designation and leaves entitlement
