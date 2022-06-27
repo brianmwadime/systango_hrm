@@ -1,4 +1,4 @@
-class CreateSystangoHrmRequestReceivers < ActiveRecord::Migration
+class CreateSystangoHrmRequestReceivers < ActiveRecord::Migration[4.2]
   def change
     create_table :systango_hrm_request_receivers do |t|
       t.integer :application_id
