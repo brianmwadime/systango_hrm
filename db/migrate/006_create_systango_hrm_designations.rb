@@ -1,4 +1,4 @@
-class CreateSystangoHrmDesignations < ActiveRecord::Migration
+class CreateSystangoHrmDesignations < ActiveRecord::Migration[4.2]
   def change
     create_table :systango_hrm_designations do |t|
       t.string :designation
