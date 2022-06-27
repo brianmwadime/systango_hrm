@@ -1,6 +1,6 @@
 class SystangoHrmCompoffsController < SystangoHrmController
   unloadable
-  before_filter :compoff_instance
+  before_action :compoff_instance
  
   def new
   end
