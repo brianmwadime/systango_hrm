@@ -1,4 +1,4 @@
-require_relative './systango_hrm/systango_hrm/user_patch'
+require_relative './systango_hrm/user_patch'
 
 module SystangoHrm
   def self.apply_patch
