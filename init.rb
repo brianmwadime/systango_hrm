@@ -44,7 +44,7 @@ Redmine::Plugin.register :systango_hrm do
 	menu :top_menu, :systango_hrm, {:controller => 'systango_hrm_employee_leaves', :action => 'index'}, :caption => "Leaves", :if => Proc.new {
     User.current.allowed_to?({:controller => 'systango_hrm_employee_leaves', :action => 'index'}, nil, {:global => true})
   }
-
-  require 'lib/systango_hrm_hook_listener' # .rb
-  require 'will_paginate/array'
 end
+
+require 'lib/systango_hrm_hook_listener'
+require 'will_paginate/array'
