@@ -1,5 +1,5 @@
-require 'state_machine'
-require 'state_machine/core'
+require 'state_machines'
+# require 'state_machine/core'
 
 module SystangoHrm
   module SystangoHrmRequestReceiverStateMachine
