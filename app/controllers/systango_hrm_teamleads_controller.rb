@@ -1,8 +1,8 @@
 class SystangoHrmTeamleadsController < SystangoHrmController
   unloadable
   
-	before_filter :validate_subordinates, only: :add_or_remove_subordinates
-	before_filter :employee_instance , only: [:subordinates, :teamleads_subordinates, :show, :show_teamleads_subordinates]
+	before_action :validate_subordinates, only: :add_or_remove_subordinates
+	before_action :employee_instance , only: [:subordinates, :teamleads_subordinates, :show, :show_teamleads_subordinates]
 
 	def show
 		begin
