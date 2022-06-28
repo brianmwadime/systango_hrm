@@ -46,8 +46,16 @@ Redmine::Plugin.register :systango_hrm do
     User.current.allowed_to?({:controller => 'systango_hrm_employee_leaves', :action => 'index'}, nil, {:global => true})
   }
 	
-	require_relative './lib/systango_hrm_hook_listener'
-	require 'will_paginate/array'
+require_relative './lib/systango_hrm_hook_listener'
+require 'will_paginate/array'
+	
+Rails.configuration.to_prepare do
+#     MyController.send :include, MyPagePatches::MyControllerPatch
+#     ActivitiesController.send(:include, MyPagePatches::ActivitiesControllerPatch)
+#     WelcomeController.send(:include, MyPagePatches::WelcomeControllerPatch)
+
+	SystangoHrm.apply_patch
+  end
 end
 
 
