@@ -1,8 +1,8 @@
-# require 'project'
 require 'redmine'
-Rails.application.config.to_prepare do
-  SystangoHrm.apply_patch
-end
+
+# Rails.application.config.to_prepare do
+#   SystangoHrm.apply_patch
+# end
 
 Rails.application.config.after_initialize do
   SystangoHrm.apply_patch
@@ -12,9 +12,9 @@ Redmine::Plugin.register :systango_hrm do
   name 'systango_hrm'
   author 'Systango'
   description 'This is a plugin for leave management for Redmine'
-  version '1.0.1'
-#  url 'http:www.systango.com'
-#  author_url 'http:www.systango.com'
+  version '1.0.2'
+ 	# url 'http:www.systango.com'
+ 	# author_url 'http:www.systango.com'
   ActiveRecord::Base.observers += [:systango_hrm_compoff_observer, :systango_hrm_designation_history_observer, :systango_hrm_leave_account_observer, :systango_hrm_teamleads_subordinates_observer, :systango_hrm_employee_leave_observer]
 
 	project_module :systango_hrm do
@@ -52,13 +52,3 @@ Redmine::Plugin.register :systango_hrm do
 	
 require_relative './lib/systango_hrm_hook_listener'
 require 'will_paginate/array'
-	
-Rails.configuration.to_prepare do
-	SystangoHrm.apply_patch
-#     MyController.send :include, MyPagePatches::MyControllerPatch
-#     ActivitiesController.send(:include, MyPagePatches::ActivitiesControllerPatch)
-#     WelcomeController.send(:include, MyPagePatches::WelcomeControllerPatch)
-  end
-end
-
-
