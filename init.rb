@@ -11,7 +11,7 @@ Redmine::Plugin.register :systango_hrm do
   version '1.0.1'
 #  url 'http:www.systango.com'
 #  author_url 'http:www.systango.com'
-#   ActiveRecord::Base.observers += [:systango_hrm_compoff_observer, :systango_hrm_designation_history_observer, :systango_hrm_leave_account_observer, :systango_hrm_teamleads_subordinates_observer, :systango_hrm_employee_leave_observer]
+  ActiveRecord::Base.observers += [:systango_hrm_compoff_observer, :systango_hrm_designation_history_observer, :systango_hrm_leave_account_observer, :systango_hrm_teamleads_subordinates_observer, :systango_hrm_employee_leave_observer]
 
 	project_module :systango_hrm do
 
