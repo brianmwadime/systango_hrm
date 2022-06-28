@@ -8,8 +8,8 @@ class SystangoHrmHolidaysController < SystangoHrmController
   include SystangoHrm::ContextMenu
   generate_context_menu("holiday")
 
-  before_filter :find_holidays, :only => [:index, :create, :calendar]
-  before_filter :initialize_params, :only => [:index, :create]
+  before_action :find_holidays, :only => [:index, :create, :calendar]
+  before_action :initialize_params, :only => [:index, :create]
   
   def calendar
   end

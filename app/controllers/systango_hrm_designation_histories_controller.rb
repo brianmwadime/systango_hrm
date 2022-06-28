@@ -1,7 +1,7 @@
 class SystangoHrmDesignationHistoriesController < SystangoHrmController
   unloadable
 
-  before_filter :initialize_designation_history, :validate_field_without_promotion, only: :update
+  before_action :initialize_designation_history, :validate_field_without_promotion, only: :update
 
   def update
     begin

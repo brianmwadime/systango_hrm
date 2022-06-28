@@ -1,9 +1,9 @@
 class SystangoHrmLeaveReportsController < SystangoHrmController
   unloadable
 
-  before_filter :leave_report_all_selected, :fetch_subordinates, :validate_teamlead_fields,
+  before_action :leave_report_all_selected, :fetch_subordinates, :validate_teamlead_fields,
                 :validate_date, only: :report
-  before_filter :leave_account_not_exist, :fetch_data_to_show_report, :fetch_teamleads_subordinates, only: [:view_report_self, :show_user_report]
+  before_action :leave_account_not_exist, :fetch_data_to_show_report, :fetch_teamleads_subordinates, only: [:view_report_self, :show_user_report]
 
   def report
 	  if @report_all

@@ -5,9 +5,9 @@ class SystangoHrmEmployeesController < SystangoHrmController
   helper :custom_fields
   include CustomFieldsHelper
 
-  before_filter :initialize_designation_history_and_leave_account, only: [:edit, :update]
-  before_filter :fetch_user_accounts, only: [:add_details, :create_leave_account, :edit, :update]
-  before_filter :initialize_leave_account, only: :update
+  before_action :initialize_designation_history_and_leave_account, only: [:edit, :update]
+  before_action :fetch_user_accounts, only: [:add_details, :create_leave_account, :edit, :update]
+  before_action :initialize_leave_account, only: :update
 
 	def add_details
 	end

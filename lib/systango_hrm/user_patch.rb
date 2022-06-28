@@ -18,7 +18,8 @@ module SystangoHrm
         has_many :systango_hrm_compoffs, dependent: :destroy
         has_one :systango_hrm_leave_account, dependent: :destroy
         has_one :systango_hrm_leave_summary_current_year, dependent: :destroy
-        has_many :self_employee_leaves, :class_name => "SystangoHrmEmployeeLeave", :foreign_key => 'user_id',:conditions => {:referral_id =>nil}, dependent: :destroy
+        # has_many :self_employee_leaves, :class_name => "SystangoHrmEmployeeLeave", :foreign_key => 'user_id',:conditions => {:referral_id =>nil}, dependent: :destroy
+        has_many :self_employee_leaves, -> { where(:referral_id =>nil) }, :class_name => "SystangoHrmEmployeeLeave", :foreign_key => 'user_id', dependent: :destroy
         has_many :referred_employee_leaves, :class_name => "SystangoHrmEmployeeLeave", :foreign_key => 'referral_id', dependent: :destroy
         has_many :systango_hrm_designation_histories, dependent: :destroy
         has_many :teamleads, :class_name => "SystangoHrmTeamleadsSubordinates", :foreign_key => 'teamlead_user_id', dependent: :destroy

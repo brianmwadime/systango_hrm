@@ -1,4 +1,4 @@
-class CreateSystangoHrmCompoffs < ActiveRecord::Migration
+class CreateSystangoHrmCompoffs < ActiveRecord::Migration[4.2]
   def change
     create_table :systango_hrm_compoffs do |t|
       t.integer :user_id

@@ -1,4 +1,4 @@
-class CreateSystangoHrmLeaveAccounts < ActiveRecord::Migration
+class CreateSystangoHrmLeaveAccounts < ActiveRecord::Migration[4.2]
   def change
     create_table :systango_hrm_leave_accounts do |t|
       t.integer :user_id

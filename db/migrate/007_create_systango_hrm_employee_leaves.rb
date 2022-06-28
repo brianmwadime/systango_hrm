@@ -1,4 +1,4 @@
-class CreateSystangoHrmEmployeeLeaves < ActiveRecord::Migration
+class CreateSystangoHrmEmployeeLeaves < ActiveRecord::Migration[4.2]
   def change
     create_table :systango_hrm_employee_leaves do |t|
       t.integer :user_id
