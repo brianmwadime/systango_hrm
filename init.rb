@@ -1,5 +1,5 @@
-require 'project'
-# require 'redmine'
+# require 'project'
+require 'redmine'
 Rails.application.config.to_prepare do
   SystangoHrm.apply_patch
 end
@@ -50,11 +50,10 @@ require_relative './lib/systango_hrm_hook_listener'
 require 'will_paginate/array'
 	
 Rails.configuration.to_prepare do
+	SystangoHrm.apply_patch
 #     MyController.send :include, MyPagePatches::MyControllerPatch
 #     ActivitiesController.send(:include, MyPagePatches::ActivitiesControllerPatch)
 #     WelcomeController.send(:include, MyPagePatches::WelcomeControllerPatch)
-
-	SystangoHrm.apply_patch
   end
 end
 
