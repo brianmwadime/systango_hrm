@@ -1,4 +1,4 @@
-
+<% if user_has_any_systango_hrm_permission? %>
   <%= stylesheet_link_tag "fieldset", :plugin => 'systango_hrm' %>
 
   <% if User.current.admin_user? or User.current.allowed_to_globally?(:manage_leave_request, {}) %>
@@ -23,3 +23,4 @@
       <%= link_to( l(:link_view_more),report_self_path, :class=> 'apply') if leaves_of_current_user.count>5 %>
     </p>
   <% end %>
+<% end %>
