@@ -1,5 +1,5 @@
-# require 'project'
-require 'redmine'
+require 'project'
+# require 'redmine'
 Rails.application.config.to_prepare do
   SystangoHrm.apply_patch
 end
