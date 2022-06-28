@@ -4,6 +4,10 @@ Rails.application.config.to_prepare do
   SystangoHrm.apply_patch
 end
 
+Rails.application.config.after_initialize do
+  SystangoHrm.apply_patch
+end
+
 Redmine::Plugin.register :systango_hrm do
   name 'systango_hrm'
   author 'Systango'
