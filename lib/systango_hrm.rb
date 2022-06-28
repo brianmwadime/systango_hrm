@@ -1,4 +1,5 @@
 require 'systango_hrm/user_patch'
+require 'systango_hrm/welcome_helper_patch.rb'
 
 module SystangoHrm
   def self.apply_patch
