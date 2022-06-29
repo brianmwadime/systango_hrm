@@ -8,6 +8,6 @@ class CreateSystangoHrmLeaveAccounts < ActiveRecord::Migration[4.2]
       t.timestamps
     end
     add_index "systango_hrm_leave_accounts", ["user_id"]
-    add_index "systango_hrm_leave_accounts", ["current_designation_id"]
+    add_index "systango_hrm_leave_accounts", ["current_designation_id"], "systango_hrm_leave_accounts_desig_id"
   end
 end
