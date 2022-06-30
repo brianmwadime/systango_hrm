@@ -7,6 +7,6 @@ class CreateSystangoHrmLeaveSummaryCurrentYears < ActiveRecord::Migration[5.2]
       t.decimal :total_comp_off_provided, :precision => 10, :scale => 2
       t.timestamps
     end
-    add_index "systango_hrm_leave_summary_current_years", ["user_id"], "systango_hrm_leave_summary_current_years_user_id_index"
+    add_index :systango_hrm_leave_summary_current_years, :user_id, :systango_hrm_leave_summary_current_years_user_id_index
   end
 end

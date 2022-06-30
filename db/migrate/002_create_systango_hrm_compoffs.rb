@@ -6,6 +6,6 @@ class CreateSystangoHrmCompoffs < ActiveRecord::Migration[4.2]
       t.string :comp_off_remarks
       t.timestamps
     end
-    add_index "systango_hrm_compoffs", ["user_id"]
+    add_index :systango_hrm_compoffs, :user_id
   end
 end
