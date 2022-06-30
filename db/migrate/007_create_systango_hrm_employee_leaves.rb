@@ -12,7 +12,7 @@ class CreateSystangoHrmEmployeeLeaves < ActiveRecord::Migration[4.2]
       t.string :status, :default => "pending"
       t.timestamps
     end
-    add_index :systango_hrm_employee_leaves, :user_id, :systango_hrm_employee_leaves_user_id_index
-    add_index :systango_hrm_employee_leaves, :referral_id, :systango_hrm_employee_leaves_referral_id_index
+    add_index :systango_hrm_employee_leaves, :user_id, :name => 'systango_hrm_employee_leaves_user_id_index'
+    add_index :systango_hrm_employee_leaves, :referral_id, :name => 'systango_hrm_employee_leaves_referral_id_index'
   end
 end
